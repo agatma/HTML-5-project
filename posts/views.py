@@ -4,8 +4,16 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'posts/index.html')
+    text = 'Это главная страница проекта Yatube'
+    context = {
+        'text': text
+    }
+    return render(request, 'posts/index.html', context)
 
 
 def group_posts(request):
-    return render(request, 'posts/group_list.html')
+    text = 'Здесь будет информация о группах проекта Yatube'
+    context = {
+        'text': text
+    }
+    return render(request, 'posts/group_list.html', context)
